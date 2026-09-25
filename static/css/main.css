@@ -1,0 +1,86 @@
+/* ==========================================
+   ARIVIYA PET FOOD RESEARCH CENTER - MAIN CSS
+   Primary Brand Color: #495384 + White (#FFFFFF)
+   ========================================== */
+
+:root {
+  /* --- Primary Brand Colors --- */
+  --brand-primary: #495384;
+  /* Main Brand Color (Slate Royal Navy) */
+  --brand-primary-dark: #363E63;
+  /* Hover & Active States */
+  --brand-primary-light: #6A75A8;
+  /* Subtle accents & borders */
+  --brand-primary-surface: #F0F3F9;
+  /* Light background tint for active items & cards */
+  --brand-primary-ghost: #E6EAF4;
+  /* Light hover backgrounds */
+
+  /* --- Secondary & Neutral Colors --- */
+  --brand-white: #FFFFFF;
+  --color-bg: #FAFAFC;
+  --color-text-main: #1E293B;
+  /* Dark slate for high readability */
+  --color-text-muted: #64748B;
+  /* Muted text for links & descriptions */
+  --color-border: #E2E8F0;
+  /* Clean subtle dividers */
+
+  /* --- Pet Science Accent Colors --- */
+  --accent-vitality: #F59E0B;
+  /* Warm Amber/Gold for pet energy & warmth */
+  --accent-health: #10B981;
+  /* Organic Green for nutrition & natural ingredients */
+}
+
+/* Custom Helper Utilities (in addition to Tailwind inline classes) */
+.bg-brand-primary {
+  background-color: var(--brand-primary);
+}
+
+.text-brand-primary {
+  color: var(--brand-primary);
+}
+
+.border-brand-primary {
+  border-color: var(--brand-primary);
+}
+
+.bg-brand-surface {
+  background-color: var(--brand-primary-surface);
+}
+
+/* Navbar active link underline indicator */
+.nav-link-active {
+  color: var(--brand-primary);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background-color: var(--brand-primary);
+  border-radius: 9999px;
+}
+
+/* Soft Rounded Display Font matching Ricky Pet Food Demo Banner */
+.font-hero-heading {
+  font-family: 'Comfortaa', 'Quicksand', 'Nunito', 'Fredoka', 'Outfit', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+
+/* Subtle Center Glow for Text Contrast */
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(13, 62, 72, 0.4) 0%, rgba(10, 52, 61, 0) 70%);
+}
+
+/* Handwritten Script Font for Natural Food 100% Badge */
+.font-badge {
+  font-family: 'Caveat', 'Dancing Script', 'Pacifico', cursive;
+}

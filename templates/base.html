@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariviya - Animal Health Care | Natural Bio-Polymer & Nanotechnology Essentials</title>
+    <meta name="description" content="Ariviya is a deep-tech startup developing sustainable, chemical-free nanobio-polymer health care essentials for dairy cattle, livestock, poultry, and pets. Supported by StartupTN.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Comfortaa:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#0D5C46',
+                            dark: '#073B2C',
+                            light: '#10B981',
+                            secondary: '#0A3D62',
+                            amber: '#F59E0B',
+                            surface: '#F4FBF7',
+                            offwhite: '#FAF7F2',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        hero: ['"Comfortaa"', '"Outfit"', '"Quicksand"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Main Custom CSS File -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body class="bg-[#FAF7F2] font-sans text-slate-800 antialiased min-h-screen flex flex-col selection:bg-emerald-200 selection:text-emerald-900">
+
+    <!-- Header Navigation Component -->
+    {% include 'components/navbar.html' %}
+
+    <!-- Main Page Content -->
+    <main class="flex-grow">
+        {% block content %}
+            {% include 'components/hero.html' %}
+            {% include 'components/nutrition_features.html' %}
+            {% include 'components/specialized_solutions.html' %}
+        {% include 'components/ariviya_technology.html' %}
+        {% endblock %}
+    </main>
+
+    <!-- Floating Right-Side WhatsApp & Call Widget -->
+    {% include 'components/floating_contact.html' %}
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-sm">
+        <p>Copyright &copy; 2026 Ariviya Pet Food Research Center. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

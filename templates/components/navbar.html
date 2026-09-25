@@ -1,0 +1,411 @@
+{% load static %}
+<!-- =================================================================
+   ARIVIYA PET FOOD RESEARCH CENTER - HEADER / NAVBAR
+   Brand Colors: Primary #495384 | Accent #F59E0B | Surface #F0F3F9
+   ================================================================= -->
+
+<header
+  class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- 1. BRAND LOGO (Left) -->
+      <a href="/" class="flex items-center group focus:outline-none py-1">
+        <img src="{% static 'assets/logo/ariviyaa.svg' %}" alt="Ariviya Logo"
+          class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+      </a>
+
+      <!-- 2. DESKTOP NAVIGATION LINKS (Center) -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <!-- HOME (Active Link with #495384 Brand Color Indicator Underline) -->
+        <a href="#hero"
+          class="relative text-xs font-extrabold tracking-wider uppercase text-[#495384] py-2 transition-colors duration-200">
+          HOME
+          <span class="absolute bottom-0 left-0 w-full h-[3px] bg-[#495384] rounded-full"></span>
+        </a>
+
+        <a href="#about-ariviya"
+          class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-[#495384] py-2 transition-colors duration-200">
+          ABOUT
+        </a>
+
+        <a href="#specialized-solutions"
+          class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-[#495384] py-2 transition-colors duration-200">
+          SERVICES
+        </a>
+
+        <a href="#ariviya-technology"
+          class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-[#495384] py-2 transition-colors duration-200">
+          PRODUCTS
+        </a>
+
+        <a href="#ariviya-technology"
+          class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-[#495384] py-2 transition-colors duration-200">
+          SHOWCASE
+        </a>
+
+        <a href="#about-ariviya"
+          class="text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-[#495384] py-2 transition-colors duration-200">
+          CONTACT
+        </a>
+      </nav>
+
+      <!-- 3. RIGHT ACTIONS (Search + CTA Button + Side Drawer Toggle Button) -->
+      <div class="flex items-center space-x-3.5">
+
+        <!-- Search Button (Circular Icon Container) -->
+        <div class="relative">
+          <button id="search-toggle-btn" type="button" aria-label="Search"
+            class="w-10 h-10 rounded-full bg-[#F0F3F9] text-[#495384] hover:bg-[#495384] hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none shadow-sm">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </button>
+
+          <!-- Dropdown Search Modal Box -->
+          <div id="search-modal"
+            class="hidden absolute right-0 mt-3 w-72 sm:w-80 bg-white rounded-2xl shadow-xl border border-slate-100 p-3 z-50">
+            <div class="relative flex items-center">
+              <input type="text" placeholder="Search pet nutrition & formulas..."
+                class="w-full pl-9 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#495384] focus:ring-2 focus:ring-[#495384]/20 text-slate-800 placeholder-slate-400">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 text-slate-400 text-xs"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Pill Button ("GET STARTED ->" in #495384 Brand Color & White Text) -->
+        <a href="#ariviya-technology"
+          class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#495384] text-white text-xs font-extrabold tracking-wider uppercase shadow-md shadow-[#495384]/25 hover:bg-[#363E63] hover:shadow-lg hover:shadow-[#495384]/35 transition-all duration-200 group">
+          <span>GET STARTED</span>
+          <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-200"></i>
+        </a>
+
+        <!-- RIGHT SIDE TOGGLE BUTTON (Opens Profile, History, Wishlist & Details Panel) -->
+        <button id="side-drawer-toggle-btn" type="button" aria-label="Open Dashboard Menu"
+          title="User Profile & Quick Menu"
+          class="w-10 h-10 rounded-xl bg-[#495384] text-white hover:bg-[#363E63] flex items-center justify-center transition-all duration-200 focus:outline-none shadow-md shadow-[#495384]/20 group">
+          <i class="fa-solid fa-bars-staggered text-lg group-hover:scale-110 transition-transform"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. RESPONSIVE MOBILE NAVIGATION DROPDOWN -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-4 pb-6 space-y-2 shadow-xl">
+    <a href="#hero"
+      class="block px-4 py-2.5 rounded-xl bg-[#F0F3F9] text-[#495384] text-xs font-extrabold tracking-wider uppercase">
+      HOME
+    </a>
+    <a href="#about-ariviya"
+      class="block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-[#495384] text-xs font-bold tracking-wider uppercase transition-colors">
+      ABOUT
+    </a>
+    <a href="#specialized-solutions"
+      class="block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-[#495384] text-xs font-bold tracking-wider uppercase transition-colors">
+      SERVICES
+    </a>
+    <a href="#ariviya-technology"
+      class="block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-[#495384] text-xs font-bold tracking-wider uppercase transition-colors">
+      PRODUCTS
+    </a>
+    <a href="#about-ariviya"
+      class="block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-[#495384] text-xs font-bold tracking-wider uppercase transition-colors">
+      CONTACT
+    </a>
+    <div class="pt-3 border-t border-slate-100">
+      <a href="#ariviya-technology"
+        class="w-full text-center px-6 py-3 rounded-full bg-[#495384] text-white text-xs font-extrabold tracking-wider uppercase shadow-md flex items-center justify-center gap-2">
+        <span>GET STARTED</span>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- =================================================================
+   5. RIGHT SLIDE-OVER SIDEBAR DRAWER (Profile, History, Wishlist & Details)
+   ================================================================= -->
+<div id="side-drawer-container" class="fixed inset-0 z-50 hidden overflow-hidden">
+
+  <!-- Backdrop Overlay -->
+  <div id="side-drawer-overlay"
+    class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+  <!-- Right Slide-over Panel -->
+  <div id="side-drawer-panel"
+    class="fixed inset-y-0 right-0 max-w-full flex pl-10 transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div
+      class="w-80 sm:w-96 bg-white shadow-2xl border-l border-slate-100 flex flex-col justify-between overflow-y-auto">
+
+      <!-- DRAWER HEADER & CONTENT -->
+      <div>
+        <!-- Top Title Bar & Close Button -->
+        <div class="p-4 px-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+          <div class="flex items-center gap-2 text-[#495384]">
+            <i class="fa-solid fa-user-shield text-base"></i>
+            <span class="font-extrabold text-xs uppercase tracking-wider">Account & Quick Menu</span>
+          </div>
+          <button id="side-drawer-close-btn" type="button" aria-label="Close Menu"
+            class="w-8 h-8 rounded-full bg-white text-slate-400 hover:text-[#495384] hover:bg-[#F0F3F9] border border-slate-200 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-xmark text-base"></i>
+          </button>
+        </div>
+
+        <!-- A. LOGIN / PROFILE CARD -->
+        <div
+          class="m-4 p-4 rounded-2xl bg-gradient-to-br from-[#495384] to-[#363E63] text-white shadow-lg shadow-[#495384]/20 relative overflow-hidden">
+          <div class="absolute -right-4 -bottom-4 opacity-10 text-white pointer-events-none">
+            <i class="fa-solid fa-paw text-8xl"></i>
+          </div>
+
+          <div class="flex items-center gap-3.5 relative z-10">
+            <!-- User Avatar -->
+            <div class="relative shrink-0">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                alt="Profile Avatar" class="w-13 h-13 rounded-full object-cover border-2 border-white/50 shadow-sm">
+              <span
+                class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-[#495384] rounded-full"></span>
+            </div>
+            <!-- Profile Info -->
+            <div class="flex flex-col min-w-0">
+              <span class="text-[10px] font-bold text-amber-300 uppercase tracking-widest">Senior Nutritionist</span>
+              <h4 class="text-sm font-bold text-white truncate">Dr. Alex Morgan</h4>
+              <span class="text-[11px] text-slate-200 truncate">alex.morgan@ariviya.org</span>
+            </div>
+          </div>
+
+          <!-- Profile Card Action Buttons -->
+          <div class="mt-3.5 pt-3 border-t border-white/15 flex items-center justify-between text-xs relative z-10">
+            <a href="#"
+              class="px-3 py-1.5 rounded-lg bg-white/15 hover:bg-white/25 text-white text-[11px] font-semibold transition flex items-center gap-1.5">
+              <i class="fa-solid fa-user-gear text-[10px]"></i> Profile Card
+            </a>
+            <a href="#"
+              class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-900 text-[11px] font-bold transition flex items-center gap-1">
+              <i class="fa-solid fa-right-to-bracket text-[10px]"></i> Sign In / Out
+            </a>
+          </div>
+        </div>
+
+        <!-- B. QUICK ACCESS MENU SECTIONS -->
+        <div class="px-4 py-2 space-y-5">
+
+          <!-- B1. HISTORY -->
+          <div>
+            <h5
+              class="px-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-clock-rotate-left text-[#495384]"></i> Research History
+            </h5>
+            <div class="space-y-1">
+              <a href="#"
+                class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-[#F0F3F9] transition-colors">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-[#F0F3F9] text-[#495384] group-hover:bg-[#495384] group-hover:text-white flex items-center justify-center text-xs transition-colors">
+                    <i class="fa-solid fa-flask"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-slate-800 group-hover:text-[#495384]">Canine Renal Formula Trial B
+                    </p>
+                    <p class="text-[10px] text-slate-400">Viewed 2 hours ago</p>
+                  </div>
+                </div>
+                <i
+                  class="fa-solid fa-chevron-right text-[10px] text-slate-300 group-hover:text-[#495384] group-hover:translate-x-0.5 transition"></i>
+              </a>
+
+              <a href="#"
+                class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-[#F0F3F9] transition-colors">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-[#F0F3F9] text-[#495384] group-hover:bg-[#495384] group-hover:text-white flex items-center justify-center text-xs transition-colors">
+                    <i class="fa-solid fa-dna"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-slate-800 group-hover:text-[#495384]">Feline Protein
+                      Bio-Availability</p>
+                    <p class="text-[10px] text-slate-400">Viewed Yesterday</p>
+                  </div>
+                </div>
+                <i
+                  class="fa-solid fa-chevron-right text-[10px] text-slate-300 group-hover:text-[#495384] group-hover:translate-x-0.5 transition"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- B2. WISHLIST / SAVED ITEMS -->
+          <div>
+            <h5
+              class="px-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-2 flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-heart text-rose-500"></i> Wishlist / Saved Formulations
+              </span>
+              <span class="px-2 py-0.5 text-[9px] font-extrabold bg-[#495384]/10 text-[#495384] rounded-full">3
+                Saved</span>
+            </h5>
+            <div class="space-y-1">
+              <a href="#"
+                class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-[#F0F3F9] transition-colors">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-slate-800 group-hover:text-[#495384]">Hypoallergenic Salmon Diet
+                    </p>
+                    <p class="text-[10px] text-amber-600 font-semibold">★ 4.9 Veterinary Grade</p>
+                  </div>
+                </div>
+                <i
+                  class="fa-solid fa-chevron-right text-[10px] text-slate-300 group-hover:text-[#495384] group-hover:translate-x-0.5 transition"></i>
+              </a>
+
+              <a href="#"
+                class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-[#F0F3F9] transition-colors">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-leaf"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-slate-800 group-hover:text-[#495384]">Gut Microbiome Supplement</p>
+                    <p class="text-[10px] text-emerald-600 font-semibold">Clinical Approved</p>
+                  </div>
+                </div>
+                <i
+                  class="fa-solid fa-chevron-right text-[10px] text-slate-300 group-hover:text-[#495384] group-hover:translate-x-0.5 transition"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- B3. MORE DETAILS & TOOLS -->
+          <div>
+            <h5
+              class="px-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-circle-info text-[#495384]"></i> More Details & Features
+            </h5>
+            <div class="space-y-1">
+              <a href="#"
+                class="flex items-center gap-3 p-2.5 rounded-xl text-slate-700 hover:bg-[#F0F3F9] hover:text-[#495384] text-xs font-bold transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-slate-100 text-slate-500 group-hover:bg-[#495384] group-hover:text-white flex items-center justify-center text-xs transition">
+                  <i class="fa-solid fa-calculator"></i>
+                </div>
+                <span>Nutrient & Calorie Calculator</span>
+              </a>
+
+              <a href="#"
+                class="flex items-center gap-3 p-2.5 rounded-xl text-slate-700 hover:bg-[#F0F3F9] hover:text-[#495384] text-xs font-bold transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-slate-100 text-slate-500 group-hover:bg-[#495384] group-hover:text-white flex items-center justify-center text-xs transition">
+                  <i class="fa-solid fa-file-medical"></i>
+                </div>
+                <span>Research Clinical Trials</span>
+              </a>
+
+              <a href="#"
+                class="flex items-center gap-3 p-2.5 rounded-xl text-slate-700 hover:bg-[#F0F3F9] hover:text-[#495384] text-xs font-bold transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-slate-100 text-slate-500 group-hover:bg-[#495384] group-hover:text-white flex items-center justify-center text-xs transition">
+                  <i class="fa-solid fa-sliders"></i>
+                </div>
+                <span>Lab Account Preferences</span>
+              </a>
+
+              <a href="#"
+                class="flex items-center gap-3 p-2.5 rounded-xl text-slate-700 hover:bg-[#F0F3F9] hover:text-[#495384] text-xs font-bold transition group">
+                <div
+                  class="w-7 h-7 rounded-lg bg-slate-100 text-slate-500 group-hover:bg-[#495384] group-hover:text-white flex items-center justify-center text-xs transition">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <span>Contact Lab Support Desk</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DRAWER FOOTER -->
+      <div class="p-4 border-t border-slate-100 bg-slate-50/80 text-center text-xs text-slate-500">
+        <p class="font-bold text-[#495384]">Ariviya Pet Research Center</p>
+        <p class="text-[10px] text-slate-400 mt-0.5">ISO 17025 Accredited Laboratory • v2.4</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- =================================================================
+   JAVASCRIPT INTERACTIVE LOGIC FOR SEARCH & SIDE DRAWER
+   ================================================================= -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 1. Search Box Dropdown Toggle
+    const searchBtn = document.getElementById('search-toggle-btn');
+    const searchModal = document.getElementById('search-modal');
+
+    if (searchBtn && searchModal) {
+      searchBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        searchModal.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!searchModal.contains(e.target) && !searchBtn.contains(e.target)) {
+          searchModal.classList.add('hidden');
+        }
+      });
+    }
+
+    // 2. Right Slide-over Side Drawer Toggle Logic
+    const sideDrawerBtn = document.getElementById('side-drawer-toggle-btn');
+    const sideDrawerCloseBtn = document.getElementById('side-drawer-close-btn');
+    const sideDrawerContainer = document.getElementById('side-drawer-container');
+    const sideDrawerOverlay = document.getElementById('side-drawer-overlay');
+    const sideDrawerPanel = document.getElementById('side-drawer-panel');
+
+    function openSideDrawer() {
+      if (!sideDrawerContainer) return;
+      sideDrawerContainer.classList.remove('hidden');
+      // Trigger smooth transition
+      setTimeout(function () {
+        sideDrawerOverlay.classList.remove('opacity-0');
+        sideDrawerOverlay.classList.add('opacity-100');
+        sideDrawerPanel.classList.remove('translate-x-full');
+        sideDrawerPanel.classList.add('translate-x-0');
+      }, 10);
+    }
+
+    function closeSideDrawer() {
+      if (!sideDrawerContainer) return;
+      sideDrawerOverlay.classList.remove('opacity-100');
+      sideDrawerOverlay.classList.add('opacity-0');
+      sideDrawerPanel.classList.remove('translate-x-0');
+      sideDrawerPanel.classList.add('translate-x-full');
+      // Wait for 300ms transition to finish before hiding container
+      setTimeout(function () {
+        sideDrawerContainer.classList.add('hidden');
+      }, 300);
+    }
+
+    if (sideDrawerBtn) {
+      sideDrawerBtn.addEventListener('click', openSideDrawer);
+    }
+
+    if (sideDrawerCloseBtn) {
+      sideDrawerCloseBtn.addEventListener('click', closeSideDrawer);
+    }
+
+    if (sideDrawerOverlay) {
+      sideDrawerOverlay.addEventListener('click', closeSideDrawer);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && sideDrawerContainer && !sideDrawerContainer.classList.contains('hidden')) {
+        closeSideDrawer();
+      }
+    });
+  });
+</script>

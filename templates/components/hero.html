@@ -1,0 +1,50 @@
+{% load static %}
+<!-- =================================================================
+   ARIVIYA PET FOOD RESEARCH CENTER - HERO SECTION
+   Exact Bottom Shelf Alignment:
+   - hero-bg.png: Dark teal top, Dog (left), Cat (right), Off-white shelf floor (bottom)
+   - image.png: Product boxes sit across shelf horizon, Food dishes rest on off-white floor
+   ================================================================= -->
+
+<section id="hero"
+  class="relative w-full overflow-hidden bg-[#0A343D] text-white flex flex-col justify-between pt-8 sm:pt-12 md:pt-14 lg:pt-16 pb-0 min-h-[480px] sm:min-h-[540px] md:min-h-[600px] lg:h-[640px]">
+
+  <!-- 1. HERO BACKGROUND IMAGE LAYER (Fixed static path without leading space) -->
+  <div class="absolute inset-0 z-0 pointer-events-none transition-all duration-300"
+    style="background-image: url({% static 'assets/hero-bg.png' %}); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
+  </div>
+
+  <!-- 2. MAIN HERO TOP CONTENT (Headline, Tagline & Pill CTA Button) -->
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+
+    <!-- Main Headline (Comfortaa / Quicksand Rounded Font) -->
+    <h1
+      class="font-hero-heading text-2xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold text-[#FDECD2] tracking-normal leading-[1.15] max-w-4xl mx-auto drop-shadow-md">
+      Innovative Chemical-Free Solutions for Pet & Farm Animal Health!
+    </h1>
+
+    <!-- Subtitle / Ingredients Promise -->
+    <p class="mt-3 sm:mt-4 text-xs sm:text-base md:text-lg font-medium text-[#E1EEF2]/90 tracking-wide">
+      Advanced Care. Naturally
+    </p>
+
+    <!-- Call To Action Button (Pill Button) -->
+    <div class="mt-4 sm:mt-6">
+      <a href="#ariviya-technology"
+        class="inline-flex items-center justify-center px-6 sm:px-9 py-2.5 sm:py-3 rounded-full bg-[#F5E5C9] hover:bg-[#FDF0D9] text-[#1A2E35] font-extrabold text-xs sm:text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 border border-[#F5E5C9]/40 group">
+        <span>VIEW PRODUCTS</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- 3. CENTER PRODUCT SHOWCASE (Neatly scaled and positioned flush on shelf floor) -->
+  <div class="relative z-30 w-full mx-auto px-4 mt-2 sm:mt-4 flex justify-center items-end pb-0 mb-0">
+    <div
+      class="relative z-40 w-[52%] sm:w-[38%] md:w-[32%] lg:w-[28%] max-w-[440px] transition-transform duration-500 hover:scale-105 mb-0 pb-0">
+      <img src="{% static 'assets/image.png' %}" alt="Tasty Food Plans for Rabbit, Dog and Cat"
+        class="w-full h-auto max-h-[220px] sm:max-h-[260px] md:max-h-[300px] object-contain block mx-auto drop-shadow-xl z-50 relative pointer-events-auto mb-0 select-none" />
+    </div>
+  </div>
+
+</section>

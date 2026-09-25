@@ -1,0 +1,41 @@
+{% load static %}
+<!-- =================================================================
+   FLOATING RIGHT-SIDE VERTICALLY CENTERED WHATSAPP & CALL WIDGET
+   - Perfectly docked icons on right screen edge
+   - Expands smoothly on hover to reveal label text
+   - Added Dummy Contact Number: +91 98765 43210
+   ================================================================= -->
+
+<div class="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3 font-sans items-end pointer-events-auto">
+  
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917010105831" target="_blank" rel="noopener noreferrer" 
+     aria-label="Chat on WhatsApp"
+     title="Chat on WhatsApp (+917010105831)"
+     class="group flex items-center bg-[#25D366] text-white rounded-l-full shadow-lg hover:shadow-[0_4px_20px_rgba(37,211,102,0.5)] transition-all duration-300 ease-in-out overflow-hidden h-12 p-1.5 cursor-pointer border-y border-l border-white/20">
+    
+    <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-xl shrink-0 group-hover:bg-white/30 group-hover:scale-105 transition-all duration-300">
+      <i class="fa-brands fa-whatsapp text-white"></i>
+    </div>
+
+    <span class="max-w-0 group-hover:max-w-[120px] opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-extrabold uppercase tracking-wider pl-0 group-hover:pl-2.5 group-hover:pr-3">
+      WhatsApp
+    </span>
+  </a>
+
+  <!-- Call Button -->
+  <a href="tel:+917010105831" 
+     aria-label="Call Us Now"
+     title="Call Us (+91 7010105831)"
+     class="group flex items-center bg-[#0284C7] text-white rounded-l-full shadow-lg hover:shadow-[0_4px_20px_rgba(2,132,199,0.5)] transition-all duration-300 ease-in-out overflow-hidden h-12 p-1.5 cursor-pointer border-y border-l border-white/20">
+    
+    <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-base shrink-0 group-hover:bg-white/30 group-hover:scale-105 transition-all duration-300">
+      <i class="fa-solid fa-phone text-white"></i>
+    </div>
+
+    <span class="max-w-0 group-hover:max-w-[120px] opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-extrabold uppercase tracking-wider pl-0 group-hover:pl-2.5 group-hover:pr-3">
+      Call Now
+    </span>
+  </a>
+
+</div>

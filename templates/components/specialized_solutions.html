@@ -1,0 +1,156 @@
+{% load static %}
+<!-- =================================================================
+   ARIVIYA SPECIALIZED SOLUTIONS - FULL-WIDTH EDGE-TO-EDGE BANNER
+   - Fullwidth without margin or padding
+   - Left: Main banner visual + Rich Science Description & Badges
+   - Right: Large Eye-Catching Circular Category Avatars (Increased Size)
+   ================================================================= -->
+
+<section id="specialized-solutions" class="w-full m-0 p-0 relative overflow-hidden bg-[#0A343D] text-white">
+
+  <!-- 1. FULL-WIDTH BACKGROUND IMAGE LAYER (Farm Pasture with Animals on Left) -->
+  <div class="absolute inset-0 z-0 bg-cover bg-left md:bg-center" style="background-image: url({% static 'assets/farm_landscape_banner.jpg' %});">
+  </div>
+
+  <!-- Semi-Transparent Gradient Overlay for Clean Contrast -->
+  <div
+    class="absolute inset-0 z-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-slate-900/85 lg:from-slate-950/90 lg:via-slate-900/50 lg:to-slate-950/85 pointer-events-none">
+  </div>
+
+  <!-- 2. FULL-WIDTH CONTENT GRID -->
+  <div class="relative z-10 w-full px-4 sm:px-8 lg:px-12 py-14 sm:py-18 lg:py-24">
+    <div class="max-w-[1700px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+      <!-- LEFT SIDE (4 Cols): Main Headline, Enhanced Description & Trust Badges -->
+      <div class="lg:col-span-4 xl:col-span-4 space-y-4 sm:space-y-5 text-left">
+
+
+        <!-- Main Headline -->
+        <h2
+          class="font-hero-heading text-2xl sm:text-4xl lg:text-[40px] font-black text-white leading-[1.18] tracking-tight drop-shadow-md">
+          Innovative Science for <br class="hidden sm:inline" />
+          <span class="text-emerald-300">Healthier Animals</span>
+        </h2>
+
+        <!-- Concise Description -->
+        <p class="text-xs sm:text-sm md:text-[15px] text-slate-100/90 leading-relaxed font-normal max-w-md">
+          Powered by patented nano-bio-polymer technology and biotechnology, Ariviya creates safe, chemical-free
+          solutions for healthier animals and a cleaner tomorrow.
+        </p>
+
+        <!-- 3 Feature Highlights Tags -->
+        <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-bold text-emerald-200">
+          <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 flex items-center gap-1.5">
+            <i class="fa-solid fa-leaf text-emerald-400"></i> 100% Biodegradable
+          </span>
+          <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 flex items-center gap-1.5">
+            <i class="fa-solid fa-flask text-sky-400"></i> TANUVAS & JSS Tested
+          </span>
+          <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 flex items-center gap-1.5">
+            <i class="fa-solid fa-award text-amber-400"></i> Supported by StartupTN
+          </span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="pt-3 flex flex-wrap items-center gap-3">
+          <a href="#ariviya-technology"
+            class="px-7 py-3 rounded-full bg-[#10B981] hover:bg-[#0D9488] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group">
+            <span>Explore Products</span>
+            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+
+          <a href="#about-ariviya"
+            class="px-6 py-3 rounded-full bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm tracking-wider uppercase border border-white/30 backdrop-blur-md hover:scale-105 transition-all duration-300">
+            About Us
+          </a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE (8 Cols): Extra Large Circular Category Avatars -->
+      <div class="lg:col-span-8 xl:col-span-8 pr-2 sm:pr-6 md:pr-10 lg:pr-12">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-start justify-center">
+
+          <!-- ITEM 1: FARM & DAIRY -->
+          <a href="#ariviya-technology" data-filter="farm"
+            class="category-filter-avatar group flex flex-col items-center text-center transition-all duration-300">
+            <div
+              class="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-56 xl:h-56 rounded-full overflow-hidden shadow-2xl border-4 lg:border-[6px] border-white/95 transition-all duration-300 group-hover:scale-110 group-hover:border-emerald-400 group-hover:shadow-[0_20px_45px_rgba(16,185,129,0.45)] bg-white/10 backdrop-blur-sm">
+              <img src="{% static 'assets/solutions/farm.png' %}" alt="Farm & Dairy"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <div class="mt-4 sm:mt-5">
+              <h3
+                class="font-hero-heading text-base sm:text-lg md:text-xl lg:text-2xl font-black text-white group-hover:text-emerald-300 transition-colors">
+                Farm & Dairy
+              </h3>
+              <p class="text-xs sm:text-sm font-bold text-emerald-200/90 mt-1">
+                Cattle Care
+              </p>
+            </div>
+          </a>
+
+          <!-- ITEM 2: PETS -->
+          <a href="#ariviya-technology" data-filter="pet"
+            class="category-filter-avatar group flex flex-col items-center text-center transition-all duration-300">
+            <div
+              class="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-56 xl:h-56 rounded-full overflow-hidden shadow-2xl border-4 lg:border-[6px] border-white/95 transition-all duration-300 group-hover:scale-110 group-hover:border-amber-400 group-hover:shadow-[0_20px_45px_rgba(245,158,11,0.45)] bg-white/10 backdrop-blur-sm">
+              <img src="{% static 'assets/solutions/pets.png' %}" alt="Pets"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <div class="mt-4 sm:mt-5">
+              <h3
+                class="font-hero-heading text-base sm:text-lg md:text-xl lg:text-2xl font-black text-white group-hover:text-amber-300 transition-colors">
+                Pets
+              </h3>
+              <p class="text-xs sm:text-sm font-bold text-amber-200/90 mt-1">
+                Dogs & Cats
+              </p>
+            </div>
+          </a>
+
+          <!-- ITEM 3: POULTRY & BIRDS -->
+          <a href="#ariviya-technology" data-filter="poultry"
+            class="category-filter-avatar group flex flex-col items-center text-center transition-all duration-300">
+            <div
+              class="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-56 xl:h-56 rounded-full overflow-hidden shadow-2xl border-4 lg:border-[6px] border-white/95 transition-all duration-300 group-hover:scale-110 group-hover:border-sky-400 group-hover:shadow-[0_20px_45px_rgba(56,189,248,0.45)] bg-white/10 backdrop-blur-sm">
+              <img src="{% static 'assets/solutions/birds.png' %}" alt="Poultry & Birds"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <div class="mt-4 sm:mt-5">
+              <h3
+                class="font-hero-heading text-base sm:text-lg md:text-xl lg:text-2xl font-black text-white group-hover:text-sky-300 transition-colors">
+                Poultry
+              </h3>
+              <p class="text-xs sm:text-sm font-bold text-sky-200/90 mt-1">
+                Flock Defense
+              </p>
+            </div>
+          </a>
+
+          <!-- ITEM 4: BIOSECURITY & HYGIENE -->
+          <a href="#ariviya-technology" data-filter="hygiene"
+            class="category-filter-avatar group flex flex-col items-center text-center transition-all duration-300">
+            <div
+              class="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-56 xl:h-56 rounded-full overflow-hidden shadow-2xl border-4 lg:border-[6px] border-white/95 transition-all duration-300 group-hover:scale-110 group-hover:border-purple-400 group-hover:shadow-[0_20px_45px_rgba(192,132,252,0.45)] bg-white/10 backdrop-blur-sm">
+              <img src="{% static 'assets/solutions/public_health.png' %}" alt="Biosecurity & Hygiene"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            </div>
+            <div class="mt-4 sm:mt-5">
+              <h3
+                class="font-hero-heading text-base sm:text-lg md:text-xl lg:text-2xl font-black text-white group-hover:text-purple-300 transition-colors">
+                Biosecurity
+              </h3>
+              <p class="text-xs sm:text-sm font-bold text-purple-200/90 mt-1">
+                Hygiene & Floors
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
